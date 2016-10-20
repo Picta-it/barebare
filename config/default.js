@@ -10,6 +10,10 @@ const projectBase = path.resolve(__dirname, '..');
 module.exports = {
   env : process.env.NODE_ENV || 'development',
 
+  log : {
+    level : 'debug'
+  },
+
   /*************************************************
   /* Project Structure
   *************************************************/
