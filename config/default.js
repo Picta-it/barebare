@@ -19,7 +19,8 @@ var configuration = {
   *************************************************/
   structure : {
     root   : projectBase,
-    client : path.join(projectBase, 'app'),
+    app    : path.join(projectBase, 'app'),
+    static : path.join(projectBase, 'app', 'statics'),
     build  : path.join(projectBase, 'build'),
     server : path.join(projectBase, 'server'),
     config : path.join(projectBase, 'config'),
