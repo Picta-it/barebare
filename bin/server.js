@@ -1,6 +1,6 @@
-const config = require('config');
 const koa = require('koa');
-const initialization = require('./initialization');
+const config = require('config');
+require('./initialization')();
 const middlewares = require('./middlewares');
 const winston = require('winston');
 
@@ -8,8 +8,6 @@ const port = config.server.port;
 const host = config.server.host;
 
 var app = koa();
-
-initialization();
 
 app.use(middlewares);
 
