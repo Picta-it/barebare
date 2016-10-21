@@ -6,8 +6,15 @@
     "node": ">=6.0.0",
     "npm": "^3.0.0"
   },
-  "scripts": {},
-  "betterScripts": {},
+  "scripts": {
+    "start": "better-npm-run start",
+    "clean": "rimraf build"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "node bin/server"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Picta-it/barebare.git"
@@ -24,6 +31,7 @@
     "isomorphic-fetch": "^2.2.1",
     "koa": "^1.2.4",
     "koa-compose": "^2.4.0",
+    "koa-webpack-dev": "^1.0.6",
     "material-ui": "^0.15.4",
     "react": "^15.3.2",
     "react-dom": "^15.0.0",
