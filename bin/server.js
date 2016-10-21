@@ -11,8 +11,8 @@ var app = koa();
 
 app.use(middlewares);
 
-winston.debug('Starting server ...');
+winston.info('Starting server ...');
 
 app.listen(port);
 
-winston.debug(`Server is now running at : http://${host}:${port}`);
+winston.info(`Server is now running at : http://${host}:${port}`);

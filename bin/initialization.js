@@ -13,5 +13,5 @@ module.exports = function () {
   winston.addColors(customColors);
   winston.level = config.log.level;
 
-  winston.debug('Initializing server ...');
+  winston.info('Initializing server ...');
 };

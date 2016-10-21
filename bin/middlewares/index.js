@@ -7,7 +7,7 @@ const webpackDevServer = require('koa-webpack-dev');
 var middlewares = [];
 var webpackConfig = path.join(config.structure.root, 'config', 'webpack');
 
-winston.debug('Initializing middlewares ...');
+winston.info('Initializing middlewares ...');
 
 middlewares.push(webpackDevServer({ config: webpackConfig }));
 
