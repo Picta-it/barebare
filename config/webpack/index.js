@@ -1,6 +1,7 @@
 const path = require('path');
 const config = require('config');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   name   : 'client',
@@ -37,6 +38,16 @@ module.exports = {
       },
       output: {
         comments: false
+      }
+    }),
+    new HtmlWebpackPlugin({
+      filename: path.join(config.structure.build, 'index.html'),
+      template: path.join(config.structure.static, 'index.html'),
+      hash    : true,
+      favicon : path.join(config.structure.static, 'favicon.ico'),
+      inject  : 'body',
+      minify  : {
+        collapseWhitespace: true
       }
     })
   ]
