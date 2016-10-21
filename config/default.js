@@ -7,7 +7,7 @@ const projectBase = path.resolve(__dirname, '..');
 /************************************************
 /* Default configuration
 *************************************************/
-module.exports = {
+var configuration = {
   env : process.env.NODE_ENV || 'development',
 
   log : {
@@ -18,6 +18,7 @@ module.exports = {
   /* Project Structure
   *************************************************/
   structure : {
+    root   : projectBase,
     client : path.join(projectBase, 'app'),
     build  : path.join(projectBase, 'build'),
     server : path.join(projectBase, 'server'),
@@ -64,3 +65,5 @@ module.exports = {
   *************************************************/
   test : {}
 };
+
+module.exports = configuration;
