@@ -7,12 +7,19 @@
     "npm": "^3.0.0"
   },
   "scripts": {
+    "dev": "better-npm-run dev",
     "start": "better-npm-run start",
     "clean": "rimraf build"
   },
   "betterScripts": {
     "start": {
       "command": "node bin/server"
+    },
+    "dev": {
+      "command": "nodemon bin/server --ignore dist --ignore coverage --ignore tests",
+      "env": {
+        "NODE_ENV": "development"
+      }
     }
   },
   "repository": {
@@ -64,6 +71,7 @@
     "eslint-plugin-promise": "^2.0.0",
     "eslint-plugin-react": "^6.0.0",
     "eslint-plugin-standard": "^2.0.0",
+    "nodemon": "^1.11.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
