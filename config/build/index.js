@@ -13,6 +13,10 @@ module.exports = {
     path    : path.join(config.structure.root, 'build'),
     filename: 'bundle.js'
   },
+  resolve: {
+    root      : config.structure.app,
+    extensions: ['', '.js', '.jsx', '.json']
+  },
   module: {
     loaders: [{
       test   : /\.js$/,
