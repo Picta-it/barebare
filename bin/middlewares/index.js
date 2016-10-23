@@ -5,7 +5,7 @@ const compose = require('koa-compose');
 const webpackDevServer = require('koa-webpack-dev');
 
 var middlewares = [];
-var webpackConfig = path.join(config.structure.root, 'config', 'webpack');
+var webpackConfig = path.join(config.structure.config.build);
 
 winston.info('Initializing middlewares ...');
 
