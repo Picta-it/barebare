@@ -23,7 +23,10 @@ var configuration = {
     static : path.join(projectBase, 'app', 'statics'),
     build  : path.join(projectBase, 'build'),
     server : path.join(projectBase, 'server'),
-    config : path.join(projectBase, 'config'),
+    config : {
+      build: path.join(projectBase, 'config', 'build'),
+      test : path.join(projectBase, 'config', 'test')
+    },
     test   : path.join(projectBase, 'tests')
   },
 
@@ -40,7 +43,7 @@ var configuration = {
   *************************************************/
   compiler : {
     babel : {
-      cache_directory : true,
+      cacheDirectory : true,
       plugins        : ['transform-runtime'],
       presets        : ['es2015', 'react', 'stage-0']
     },
@@ -64,7 +67,12 @@ var configuration = {
   /*************************************************
   /* Test configuration
   *************************************************/
-  test : {}
+  test : {
+    reporters: [
+      { type : 'text-summary' },
+      { type : 'lcov', dir : 'coverage' }
+    ]
+  }
 };
 
 module.exports = configuration;
