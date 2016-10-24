@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux';
+import { browserHistory, Router } from 'react-router';
 
 class Barebare extends Component {
   static propTypes = {
-    store: PropTypes.object.isRequired
+    routes: PropTypes.object.isRequired,
+    store : PropTypes.object.isRequired
   }
 
   shouldComponentUpdate () {
@@ -11,11 +13,11 @@ class Barebare extends Component {
   }
 
   render () {
-    const { store } = this.props;
+    const { routes, store } = this.props;
 
     return (
       <Provider store={store}>
-        <div />
+        <Router history={browserHistory} children={routes} />
       </Provider>
     );
   }

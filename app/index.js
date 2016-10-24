@@ -8,6 +8,7 @@ import { indigo800, deepOrangeA400 } from 'material-ui/styles/colors';
 
 import Barebare from './containers/Barebare';
 import barebareApp from './reducers';
+import routes from './routes/index';
 
 injectTapEventPlugin();
 
@@ -32,7 +33,7 @@ const MOUNT_NODE = document.getElementById('mount');
 let render = () => {
   ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
-      <Barebare store={store} />
+      <Barebare store={store} routes={routes()} />
     </MuiThemeProvider>,
     MOUNT_NODE
   );
