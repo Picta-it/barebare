@@ -23,8 +23,13 @@ module.exports = {
       exclude: /node_modules/,
       loader : 'babel-loader', // 'babel-loader' is also a legal name to reference
       query  : {
-        presets: ['es2015'],
-        plugins: ['transform-object-rest-spread']
+        presets: ['es2015', 'es2017', 'react'],
+        plugins: [
+          'transform-object-rest-spread',
+          'transform-runtime',
+          'transform-decorators-legacy',
+          'transform-class-properties'
+        ]
       }
     }]
   },
