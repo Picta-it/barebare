@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Dashboard = () => (
-  <div>
-    Dashboard pouet
-  </div>
-);
-
-export default Dashboard;
+export class Dashboard extends React.Component {
+  render () {
+    return <div>
+      Dashboard pouet
+    </div>
+  }
+}
