@@ -8,8 +8,8 @@ const middlewareConfig = {
   noInfo    : false,
   lazy      : false,
   stats     : {
-    chunks      : false,
-    chunkModules: false,
+    chunks      : true,
+    chunkModules: true,
     colors      : true
   }
 };
