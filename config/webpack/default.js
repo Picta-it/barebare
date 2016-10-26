@@ -4,14 +4,18 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  name   : 'client',
-  target : 'web',
-  devtool: config.compiler.devtool,
-
-  entry : path.join(config.structure.root, 'app'),
+  name              : 'client',
+  target            : 'web',
+  devtool           : config.compiler.devtool,
+  historyApiFallback: true,
+  entry             : [
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    path.join(config.structure.root, 'app', 'index.js')
+  ],
   output: {
-    path    : path.join(config.structure.root, 'build'),
-    filename: 'bundle.js'
+    path      : path.join(config.structure.root, 'build'),
+    publicPath: '/',
+    filename  : 'bundle.js'
   },
   resolve: {
     root      : config.structure.app,
@@ -24,6 +28,11 @@ module.exports = {
       loader : 'babel-loader', // 'babel-loader' is also a legal name to reference
       query  : {
         presets: ['es2015', 'es2017', 'react'],
+        env    : {
+          development: {
+            presets: ['react-hmre']
+          }
+        },
         plugins: [
           'transform-object-rest-spread',
           'transform-runtime',
@@ -41,6 +50,9 @@ module.exports = {
     'react-redux': 'ReactRedux'
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false

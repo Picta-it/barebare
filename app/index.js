@@ -39,4 +39,14 @@ let render = () => {
   );
 };
 
+if (module.hot) {
+  // Setup hot module replacement
+  module.hot.accept('./routes/index', () => {
+    return setImmediate(() => {
+      ReactDOM.unmountComponentAtNode(MOUNT_NODE);
+      render();
+    });
+  });
+}
+
 render();

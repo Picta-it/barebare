@@ -24,7 +24,7 @@ var configuration = {
     build  : path.join(projectBase, 'build'),
     server : path.join(projectBase, 'server'),
     config : {
-      build: path.join(projectBase, 'config', 'build'),
+      build: path.join(projectBase, 'config', 'webpack', 'default'),
       test : path.join(projectBase, 'config', 'test')
     },
     test   : path.join(projectBase, 'tests')
