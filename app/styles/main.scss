@@ -3,14 +3,14 @@
 @import '../../node_modules/knacss/sass/knacss.scss';
 
 body {
-  @extend .mdl-color--indigo-A400;
+  @extend .mdl-color--indigo-50;
 }
 
 @media (min-width: ($tiny + 1)) {
-  body {
-    background-size:  cover;
-    background-image: url(http://192.168.1.12:3000/static/images/background.png);
-  }
+  // body {
+  //   background-size:  cover;
+  //   background-image: url('/static/images/background.png');
+  // }
 }
 
 input {
@@ -22,7 +22,7 @@ input {
   height: 100%;
 }
 
-.mainLoginContainer {
+.loginComponent {
   @extend .tiny-w100, .small-w50, .mauto, .mdl-shadow--8dp, .mdl-color--white;
 
   .mdl-card__actions {
@@ -30,6 +30,38 @@ input {
 
     .mdl-button {
      @extend .mdl-color-text--primary-contrast, .mdl-color--primary-dark;
+    }
+  }
+}
+
+.dashboardComponent {
+  @media (max-width: ($tiny)) {
+    .mdl-layout__content {
+      margin-top: 0.2rem;
+      margin-bottom: 2rem;
+
+      .spaced {
+        padding: 0.2rem;
+        
+        .mdl-card {
+          padding: 0.8rem 1.6rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: ($tiny + 1)) {
+    .mdl-layout__content {
+      margin-top: 0.4rem;
+      margin-bottom: 4rem;
+
+      .spaced {
+        padding: 0.4rem;
+
+        .mdl-card {
+          padding: 0.8rem 1.6rem;
+        }
+      }
     }
   }
 }
