@@ -6,22 +6,13 @@ import {
 } from '../materialDesign';
 
 export default class Header extends React.Component {
-  render () {
-    console.log(LayoutDrawer);
+  static propTypes = {
+    title: PropTypes.any
+  };
 
-    return <LayoutDrawer>
+  render () {
+    return <LayoutDrawer title={ this.props.title }>
       { this.props.children }
     </LayoutDrawer>
   }
 }
-
-/**
- * 
-      <span className='mdl-layout-title'>Title</span>
-      <Navigation>
-        <NavigationLink href=''>Link</NavigationLink>
-        <NavigationLink href=''>Link</NavigationLink>
-        <NavigationLink href=''>Link</NavigationLink>
-        <NavigationLink href=''>Link</NavigationLink>
-      </Navigation>
- */

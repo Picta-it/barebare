@@ -6,7 +6,7 @@ import {
 
 export default class Header extends React.Component {
   static propTypes = {
-    title:    PropTypes.object,
+    title:    PropTypes.any,
     content:  PropTypes.object,
     tabs:     PropTypes.object
   };
