@@ -7,6 +7,8 @@ import Barebare from './containers/Barebare';
 import barebareApp from './reducers';
 import routes from './routes/index';
 
+import styles from './styles/main.scss';
+
 injectTapEventPlugin();
 
 /*************************************************
@@ -18,7 +20,7 @@ const store = createStore(barebareApp);
 /*************************************************
 /* Setup mount node
 *************************************************/
-const MOUNT_NODE = document.getElementById('mount');
+const MOUNT_NODE = document.getElementById('root');
 
 let render = () => {
   ReactDOM.render(
