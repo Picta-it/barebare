@@ -1,4 +1,5 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const config = require('config');
 require('./initialization')();
 const middlewares = require('./middlewares');
@@ -8,6 +9,7 @@ const port = config.server.port;
 const host = config.server.host;
 
 app.use(middlewares);
+app.use('/static', express.static(config.structure.static));
 
 winston.info('Starting server ...');
 

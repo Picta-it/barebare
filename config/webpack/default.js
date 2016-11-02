@@ -40,6 +40,9 @@ module.exports = {
           'transform-class-properties'
         ]
       }
+    }, {
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
     }]
   },
   externals: {
