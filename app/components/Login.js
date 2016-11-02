@@ -12,7 +12,7 @@ export default class Login extends React.Component {
   };
 
   render () {
-    let componentClass = 'loginContainer mauto tiny-w100 small-w50 ';
+    let componentClass = 'loginComponent mauto tiny-w100 small-w50 ';
     componentClass += this.props.inheritedClass || '';
 
     return <Card inheritedClass={ componentClass }>
