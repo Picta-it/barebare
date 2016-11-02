@@ -1,0 +1,35 @@
+@import './variables.scss';
+@import '../../node_modules/material-design-lite/src/material-design-lite.scss';
+@import '../../node_modules/knacss/sass/knacss.scss';
+
+body {
+  @extend .mdl-color--indigo-A400;
+}
+
+@media (min-width: ($tiny + 1)) {
+  body {
+    background-size:  cover;
+    background-image: url(http://192.168.1.12:3000/static/images/background.png);
+  }
+}
+
+input {
+  line-height: 32px;
+}
+
+#root {
+  position: absolute;
+  height: 100%;
+}
+
+.mainLoginContainer {
+  @extend .tiny-w100, .small-w50, .mauto, .mdl-shadow--8dp, .mdl-color--white;
+
+  .mdl-card__actions {
+    @extend .txtright;
+
+    .mdl-button {
+     @extend .mdl-color-text--primary-contrast, .mdl-color--primary-dark;
+    }
+  }
+}
