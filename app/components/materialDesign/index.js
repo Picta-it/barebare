@@ -1,5 +1,6 @@
 import {
   Layout,
+  LayoutDrawer,
   LayoutTab,
   LayoutTabBar,
   LayoutTabPanel,
@@ -15,6 +16,7 @@ import NavigationLink from './NavigationLink';
 
 export {
   Layout,
+  LayoutDrawer,
   LayoutTab,
   LayoutTabBar,
   LayoutTabPanel,
