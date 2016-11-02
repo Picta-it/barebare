@@ -4,7 +4,7 @@ import Login from '../containers/MainLogin';
 export const createRoutes = function () {
   return ({
     path     : '/',
-    component: Login
+    component: MainDashboard
   });
 };
 
