@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import {
   LayoutTab,
   LayoutTabBar
@@ -15,6 +15,6 @@ export default class HeaderTabs extends React.Component {
       <LayoutTab href='#scroll-tab-3' inheritedClass='w20'>Tab 3</LayoutTab>
       <LayoutTab href='#scroll-tab-4' inheritedClass='w20'>Tab 4</LayoutTab>
       <LayoutTab href='#scroll-tab-5' inheritedClass='w20'>Tab 5</LayoutTab>
-    </LayoutTabBar>
+    </LayoutTabBar>;
   }
 }

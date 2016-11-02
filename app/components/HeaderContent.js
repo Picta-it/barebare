@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import {
   Navigation,
   NavigationLink
@@ -14,6 +14,6 @@ export default class HeaderContent extends React.Component {
       <NavigationLink href=''>Link</NavigationLink>
       <NavigationLink href=''>Link</NavigationLink>
       <NavigationLink href=''>Link</NavigationLink>
-    </Navigation>
+    </Navigation>;
   }
 }
