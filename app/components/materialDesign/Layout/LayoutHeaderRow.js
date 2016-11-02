@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 export default class LayoutHeaderRow extends React.Component {
   static propTypes = {
     inheritedClass:  PropTypes.string,
-    title:           PropTypes.string
+    title:           PropTypes.any
   };
 
   render () {
