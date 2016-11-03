@@ -1,0 +1,52 @@
+{
+"$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Authentication",
+  "type": "object",
+  "properties": {
+    "credentials": {
+      "type": "object",
+      "oneOf": [
+          { "$ref": "#/definitions/raw" },
+          { "$ref": "#/definitions/cookie" }
+      ]
+    },
+    "expiration": {
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "raw": {
+      "title": "Raw Credentials",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [ "raw" ]
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["kind", "username", "password"]
+    },
+    "cookie": {
+      "title": "Token Credentials",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [ "cookie" ]
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["kind", "token"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["credentials"]
+}
