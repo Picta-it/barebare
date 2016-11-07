@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import {
   LayoutContent
 } from '../materialDesign';
@@ -6,7 +6,7 @@ import {
 export default class Header extends React.Component {
   render () {
     return <LayoutContent>
-     { this.props.children }
-    </LayoutContent>
+      { this.props.children }
+    </LayoutContent>;
   }
 }
