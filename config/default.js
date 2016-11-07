@@ -68,6 +68,7 @@ var configuration = {
   /* Test configuration
   *************************************************/
   test : {
+    tresholds: 80,
     reporters: [
       { type : 'text-summary' },
       { type : 'lcov', dir : 'coverage' }
