@@ -4,8 +4,8 @@ import { shallow } from 'enzyme';
 
 test('Link changes the class when hovered', () => {
   const component = shallow(
-    <Dashboard>Facebook</Dashboard>
+    <Dashboard>Test</Dashboard>
   );
 
-  expect(component.hasClass('pouet')).toEqual(true);
+  expect(component.hasClass('pouet')).toEqual(false);
 });
