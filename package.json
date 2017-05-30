@@ -10,8 +10,7 @@
     "dev": "better-npm-run dev",
     "start": "better-npm-run start",
     "clean": "rimraf build",
-    "test": "better-npm-run test",
-    "jest": "jest"
+    "test": "jest"
   },
   "betterScripts": {
     "start": {
@@ -22,9 +21,6 @@
       "env": {
         "NODE_ENV": "development"
       }
-    },
-    "test": {
-      "command": "node ./node_modules/karma/bin/karma start config/test/karma.conf.js"
     }
   },
   "repository": {
