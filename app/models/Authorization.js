@@ -1,9 +1,9 @@
-import BasisModel from './BasisModel';
+import Basis from './Basis';
 
 let fakeResult = { token: 'pouet pouet' };
 let fakeError = { error: 'L\'authentification a echoué' };
 
-export default class AuthorizationModel extends BasisModel {
+export default class AuthorizationModel extends Basis {
   create () {
     let deferred = new Promise((resolve, reject) => {
       if (this.username) {
