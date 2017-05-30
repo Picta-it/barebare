@@ -1,10 +1,9 @@
-import MainPage from '../containers/MainPage';
-import Login from '../containers/MainLogin';
+import DashboardPage from '../containers/DashboardPage';
 
 export const createRoutes = function () {
   return ({
     path     : '/',
-    component: MainPage
+    component: DashboardPage
   });
 };
 
